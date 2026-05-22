@@ -1,0 +1,52 @@
+a{
+    display: inline-block;
+    width: fit-content;
+    padding: 8px 18px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+    background-color: rgba(255,255,255,0.2);
+    color: #333;
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+    transition: all 1s;
+}
+a:hover{
+    transition: all 0.3s;
+    background-color: rgb(235, 214, 214);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+    scale: 1.05;
+    color: black;
+}
+ul{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+    transition: 0.5s 1s;
+}
+ul li a{
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: 0 30px;
+    color: #57555b;
+    font-size: 40px;
+    text-decoration: none;
+}
+ul:hover li{
+    opacity: 0.2;
+    filter: blur(2px);
+}
+ul li:hover{
+    transition: 0.5s;
+    opacity: 1;
+    filter: blur(0px);
+}
