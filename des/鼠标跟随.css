@@ -1,0 +1,21 @@
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh; /* 强制高度撑满整个屏幕 */
+        cursor: none; /* 在整个屏幕范围内隐藏默认鼠标 */
+        overflow: hidden; /* 建议加上，防止图片移动到边缘撑出滚动条 */
+      }
+      a {
+        cursor: none;
+      }
+      #cursor-img {
+        position: absolute;
+        height: 36px;
+        z-index: 9999;
+        /* 下面两行是重点 */
+        pointer-events: none; /* 让鼠标事件穿透图片，避免图片阻挡点击，也能减少指针闪烁 */
+        user-select: none; /* 防止图片被意外选中或拖拽 */
+      }
