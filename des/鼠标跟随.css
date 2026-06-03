@@ -5,7 +5,7 @@
         padding: 0;
         width: 100%;
         height: 100vh; /* 强制高度撑满整个屏幕 */
-        cursor: none; /* 在整个屏幕范围内隐藏默认鼠标 */
+        cursor: none; /* 隐藏默认鼠标，用自定义图片代替 */
         overflow: hidden; /* 建议加上，防止图片移动到边缘撑出滚动条 */
       }
       a {
