@@ -65,3 +65,63 @@ ul li a:hover {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     color: #000000;
 }
+
+/* 桌面端隐藏分页导航按钮 */
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+        padding-top: 30px;
+        letter-spacing: 4px;
+    }
+
+    ul {
+        height: auto;
+        flex-wrap: nowrap;
+        align-items: center;
+        align-content: center;
+        row-gap: 16px;
+        column-gap: 0;
+        margin: 30px 16px;
+    }
+
+    ul li a {
+        width: calc(100vw - 40px);
+        max-width: 340px;
+        height: 64px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        border-radius: 12px;
+    }
+
+    /* 分页按钮样式略作区分 */
+    .mobile-only a {
+        background: rgba(255, 255, 255, 0.5);
+        color: #666;
+        font-size: 16px;
+    }
+
+    /* 手机端默认显示第一页 */
+    .mobile-only {
+        display: list-item;
+    }
+
+    .p2,
+    .nav-p2 {
+        display: none;
+    }
+
+    /* 切换到第二页时 */
+    body.page2-active .p1,
+    body.page2-active .nav-p1 {
+        display: none;
+    }
+
+    body.page2-active .p2,
+    body.page2-active .nav-p2 {
+        display: list-item;
+    }
+}
